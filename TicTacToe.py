@@ -13,14 +13,28 @@ count = 0
 message = "Congratulations, Player " + player + ". You Won✨🎉🎉"
 
 #The GameBoard Displayed
-def printboard(board):
+def printBoard(board):
     print(' ' + board['7'] + ' | ', board['8'] + ' | ', board['9'])
-    print('-+-+-')
+    print('--+---+--')
     print(' ' + board['4'] + ' | ', board['5'] + ' | ', board['6'])
-    print('-+-+-')
+    print('--+---+--')
     print(' ' + board['1'] + ' | ', board['2'] + ' | ', board['3'])
-    print('-+-+-')
 
+def printboard(board):
+    print("\n")
+    print("\t     |     |")
+    print("\t  {}   |  {}   |  {}".format(board['7'], board['8'], board['9']))
+    print('\t_____|_____|_____')
+
+    print("\t     |     |")
+    print("\t  {}   |  {}   |  {}".format(board['4'], board['5'], board['6']))
+    print('\t_____|_____|_____')
+
+    print("\t     |     |")
+
+    print("\t  {}   |  {}   |  {}".format(board['1'], board['2'], board['3']))
+    print("\t     |     |")
+    print("\n")
 #The Game
 def gameplay():
 
