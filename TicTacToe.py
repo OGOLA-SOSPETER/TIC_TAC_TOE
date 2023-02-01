@@ -1,12 +1,18 @@
 #The tic-tac-toe game
 
+#Designing the board
 game_board = {'7': '', '8': '', '9': '',
               '4': '', '5': '', '6': '',
               '1': '', '2': '', '3': '',
               }
+#Player
 player = 'X'
 count = 0
+
+#Message on winning
 message = "Congratulations, Player " + player + ". You Won✨🎉🎉"
+
+#The GameBoard Displayed
 def printboard(board):
     print(' ' + board['7'] + ' | ', board['8'] + ' | ', board['9'])
     print('-+-+-')
@@ -15,6 +21,7 @@ def printboard(board):
     print(' ' + board['1'] + ' | ', board['2'] + ' | ', board['3'])
     print('-+-+-')
 
+#The Game
 def gameplay():
 
     global player
@@ -36,7 +43,7 @@ def gameplay():
             player = 'O'
         else:
             player = 'X'
-
+#Checking for the winning player
         if count >= 5:
             if game_board['7'] == game_board['8'] == game_board['9'] == player:  # across the top
                 printboard(game_board)
@@ -89,7 +96,5 @@ def gameplay():
 
             # we have to change the player after every move.
 
-
-
-
+#Game Call
 gameplay()
