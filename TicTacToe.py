@@ -33,10 +33,10 @@ def gameplay():
         if game_board[move] == '':
             game_board[move] = player
             count = count + 1
-            counter = count
+
         else:
             print('Try another position!!')
-            count = counter
+            count = count
             continue
 
         if player == 'X':
@@ -95,6 +95,20 @@ def gameplay():
             print("It's a Tie!!")
 
             # we have to change the player after every move.
+def GameRestart():
+    game_start = []
 
+    for key in game_board:
+        game_start.append(key)
+
+    confirm = input("Do want to play Again?(y/n)")
+
+    if confirm == "y" or confirm == "Y":
+        for key in game_start:
+            game_board[key] = " "
+            gameplay()
+        
+        
 #Game Call
 gameplay()
+GameRestart()
